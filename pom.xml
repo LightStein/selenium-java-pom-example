@@ -60,14 +60,15 @@
             <version>2.3.1</version>
         </dependency>
         <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>3.141.59</version>
-        </dependency>
-        <dependency>
             <groupId>com.google.inject</groupId>
             <artifactId>guice</artifactId>
             <version>4.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
         </dependency>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
@@ -84,5 +85,6 @@
             <artifactId>selenium-server</artifactId>
             <version>3.141.59</version>
         </dependency>
+
     </dependencies>
 </project>

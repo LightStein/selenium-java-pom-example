@@ -8,18 +8,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 /**
- * Guice configuration module for WebDriver object.
+ * configuration module for WebDriver object.
  */
 public class DriverModule extends AbstractModule {
 
     /** Configure method. It binds a selected type of BrowserDriver. */
     protected synchronized void configure() {
-        ChromeDriverManager.chromedriver().setup();
+
         // Set Chromedriver executable path.
         setChromedriverPath();
 
+        // add headless parameter to ChromeDriver
+        ChromeDriverManager.chromedriver().setup();
         ChromeOptions chromeoptions = new ChromeOptions();
         chromeoptions.addArguments("--headless");
+
         // Bind WebDriver object to ChromeDriver.
         bind(WebDriver.class).toInstance(new ChromeDriver(chromeoptions));
     }
