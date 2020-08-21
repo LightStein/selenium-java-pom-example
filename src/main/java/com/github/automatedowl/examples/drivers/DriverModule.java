@@ -17,7 +17,7 @@ public class DriverModule extends AbstractModule {
 
         // Set Chromedriver executable path.
         setChromedriverPath();
-        // add headless argument to options
+
         ChromeDriverManager.chromedriver().setup();
         ChromeOptions chromeoptions = new ChromeOptions();
         chromeoptions.addArguments("--headless");
